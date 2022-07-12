@@ -1,27 +1,12 @@
 <app-header></app-header>
 <div class="container inline-flex">
-  <app-visual class="container w-1/3 mr-20"></app-visual>
+  <app-visual class="container w-100 mr-20"></app-visual>
   <div>
-    <app-options heading="accessorize the alpaca's"></app-options>
-    <div class="container w-80 mb-10">
-      <app-button text="Hair"></app-button>
-      <app-button text="Ears"></app-button>
-      <app-button text="Eyes"></app-button>
-      <app-button text="Mouth"></app-button>
-      <app-button text="Neck"></app-button>
-      <app-button text="Leg"></app-button>
-      <app-button text="Accessories"></app-button>
-      <app-button text="Background"></app-button>
-    </div>
+    <app-options-accessorize heading="accessorize the alpaca's" 
+      [options]='["Hair", "Ears", "Eyes", "Mouth", "Neck", "Leg", "Accessories", "Background"]'>
+    </app-options-accessorize>
 
-    <app-options heading="style"></app-options>
-    <div class="container w-96">
-      <app-button text="Default"></app-button>
-      <app-button text="Curls"></app-button>
-      <app-button text="Short"></app-button>
-      <app-button text="Bang"></app-button>
-      <app-button text="Elegant"></app-button>
-      <app-button text="Quiff"></app-button>
-    </div>
+    <app-options-style heading="style" class="container w-96">
+    </app-options-style>
   </div>
 </div>

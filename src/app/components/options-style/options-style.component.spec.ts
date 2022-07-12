@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OptionsComponent } from './options.component';
+import { OptionsStyleComponent } from './options-style.component';
 
-describe('OptionsComponent', () => {
-  let component: OptionsComponent;
-  let fixture: ComponentFixture<OptionsComponent>;
+describe('OptionsStyleComponent', () => {
+  let component: OptionsStyleComponent;
+  let fixture: ComponentFixture<OptionsStyleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OptionsComponent ]
+      declarations: [ OptionsStyleComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OptionsComponent);
+    fixture = TestBed.createComponent(OptionsStyleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
