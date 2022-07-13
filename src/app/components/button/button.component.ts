@@ -4,7 +4,7 @@ import { ButtonInteractionService } from 'src/app/services/button-interaction.se
 @Component({
   selector: 'app-button',
   template: `
-    <button (click)="clickHandler()" class="{{style.font}} font-medium {{style.bg}} {{style.border}} rounded-full m-1 py-2 px-7">{{ text }}</button>
+    <button (click)="onClick()" class="{{style.font}} font-medium {{style.bg}} {{style.border}} rounded-full m-1 py-2 px-7">{{ text }}</button>
   `
 })
 export class ButtonComponent implements OnInit {
@@ -30,7 +30,7 @@ export class ButtonComponent implements OnInit {
     border: "border-primary border-2 border-blue-400 hover:border-blue-500"
   }
 
-  clickHandler() {
+  onClick() {
       this.data.changeStyle(this.clicked);
       this.style = this.standard;
   }

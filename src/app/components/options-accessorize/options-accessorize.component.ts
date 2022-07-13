@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Option } from 'src/app/datatypes/option';
 import { OptionsInteractionService } from 'src/app/services/options-interaction.service';
 
 @Component({
@@ -10,31 +11,27 @@ import { OptionsInteractionService } from 'src/app/services/options-interaction.
     </div>
   `
 })
-export class OptionsAccessorizeComponent implements OnInit {
+export class OptionsAccessorizeComponent {
   @Input() heading: string = "";
 
   @Input() options: string[] = [];
 
-  selections: string[][] = [
-    ["Default", "Curls", "Short", "Bang", "Elegant", "Quiff"],
-    ["Default", "Tilt-Backward", "Tilt-Forward"],
-    ["Default", "Angry", "Naughty", "Panda", "Smart", "Star"],
-    ["Default", "Astonished", "Eating", "Laugh", "Tongue"],
-    ["Default", "Bend-Backward", "Bend-Forward", "Thick"],
-    ["Default", "Bubble-Tea", "Cookie", "Game-Console", "Tilt-Backward", "Tilt-Forward"],
-    ["Headphone", "Earings", "Flower", "Glasses"],
-    ["Blue50", "Blue60", "Blue70", "Dark Blue 30", "Dark Blue 50", "Dark Blue 70",
-      "Green 50", "Green 60", "Green 70", "Grey 40", "Grey 70", "Grey 80", 
-      "Red 50", "Red 60", "Red 70", "Yellow 50", "Yellow 60", "Yellow 70"]
+  selections: {labels: string[], identifier: Option, specifier: string}[] = [
+    {labels: ["Default", "Curls", "Short", "Bang", "Elegant", "Quiff"], identifier: Option.HAIR, specifier: ""},
+    {labels: ["Default", "Tilt-Backward", "Tilt-Forward"], identifier: Option.EARS, specifier: ""},
+    {labels: ["Default", "Angry", "Naughty", "Panda", "Smart", "Star"], identifier: Option.EYES, specifier: ""},
+    {labels: ["Default", "Astonished", "Eating", "Laugh", "Tongue"], identifier: Option.MOUTH, specifier: ""},
+    {labels: ["Default", "Bend-Backward", "Bend-Forward", "Thick"], identifier: Option.NECK, specifier: ""},
+    {labels: ["Default", "Bubble-Tea", "Cookie", "Game-Console", "Tilt-Backward", "Tilt-Forward"], identifier: Option.LEG, specifier: ""},
+    {labels: ["Headphone", "Earings", "Flower", "Glasses"], identifier: Option.ACCESSORIES, specifier: ""},
+    {labels: ["Blue50", "Blue60", "Blue70", "DarkBlue30", "DarkBlue50", "DarkBlue70",
+              "Green50", "Green60", "Green70", "Grey40", "Grey70", "Grey80", 
+              "Red50", "Red60", "Red70", "Yellow50", "Yellow60", "Yellow70"], identifier: Option.BACKGROUND, specifier: ""}
   ]
 
   constructor(private data: OptionsInteractionService) { }
 
-  ngOnInit(): void {
+  newValue(index: number) {
+    this.data.changeValue(this.selections[index]);
   }
-
-  newValue(selection: number) {
-    this.data.changeValue(this.selections[selection]);
-  }
-
 }
