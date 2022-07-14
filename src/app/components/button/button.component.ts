@@ -17,21 +17,21 @@ export class ButtonComponent implements OnInit {
   }
 
   standard: {font: string; bg: string; border: string} = {
-    font: "text-white",
-    bg: "bg-blue-800",
-    border: "border-primary border-2"
+    font: "text-blue-400 hover:text-blue-700",
+    bg: "bg-transparent",
+    border: "border-primary border-2 border-blue-400 hover:border-blue-500"
   }
 
   style: {font: string; bg: string; border: string} = this.standard;
 
   clicked: {font: string; bg: string; border: string} = {
-    font: "text-blue-400 hover:text-blue-700",
-    bg: "bg-white",
-    border: "border-primary border-2 border-blue-400 hover:border-blue-500"
+    font: "text-white",
+    bg: "bg-blue-800",
+    border: "border-primary border-2"
   }
 
   onClick() {
-      this.data.changeStyle(this.clicked);
-      this.style = this.standard;
+      this.data.changeStyle(this.standard);
+      this.style = this.clicked;
   }
 }

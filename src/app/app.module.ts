@@ -8,6 +8,7 @@ import { VisualComponent } from './components/visual/visual.component';
 import { ButtonComponent } from './components/button/button.component';
 import { OptionsAccessorizeComponent } from './components/options-accessorize/options-accessorize.component';
 import { OptionsStyleComponent } from './components/options-style/options-style.component';
+import { ButtonActionComponent } from './components/button-action/button-action.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { OptionsStyleComponent } from './components/options-style/options-style.
     ButtonComponent,
     OptionsAccessorizeComponent,
     OptionsStyleComponent,
+    ButtonActionComponent,
   ],
   imports: [
     BrowserModule,

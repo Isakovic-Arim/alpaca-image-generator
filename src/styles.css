@@ -4,6 +4,7 @@
 
 body {
     margin: 4vh 20vw;
+    background-color: hsl(0, 0%, 95%);
 }
 
 .z-60 {
@@ -20,4 +21,8 @@ body {
 
 .z-90 {
     z-index: 90;
+}
+
+.z-100 {
+    z-index: 100;
 }
