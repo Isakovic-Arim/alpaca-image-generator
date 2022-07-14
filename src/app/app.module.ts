@@ -8,7 +8,8 @@ import { VisualComponent } from './components/visual/visual.component';
 import { ButtonComponent } from './components/button/button.component';
 import { OptionsAccessorizeComponent } from './components/options-accessorize/options-accessorize.component';
 import { OptionsStyleComponent } from './components/options-style/options-style.component';
-import { ButtonActionComponent } from './components/button-action/button-action.component';
+import { ButtonDownloadComponent } from './components/button-download/button-download.component';
+import { ButtonRandomComponent } from './components/button-random/button-random.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ButtonActionComponent } from './components/button-action/button-action.
     ButtonComponent,
     OptionsAccessorizeComponent,
     OptionsStyleComponent,
-    ButtonActionComponent,
+    ButtonDownloadComponent,
+    ButtonRandomComponent,
   ],
   imports: [
     BrowserModule,

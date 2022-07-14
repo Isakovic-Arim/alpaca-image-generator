@@ -5,8 +5,8 @@ import { OptionsInteractionService } from 'src/app/services/options-interaction.
 @Component({
   selector: 'app-options-accessorize',
   template: `
-    <header><h2 class="text-sm font-bold container w-96">{{ heading.toUpperCase() }}</h2></header>
-    <div class="container w-96 mb-10">
+    <header><h2 class="text-sm font-bold container">{{ heading.toUpperCase() }}</h2></header>
+    <div class="container w-96 mb-20">
       <app-button (click)="newValue(i)" *ngFor="let option of options, index as i" [text]="option"></app-button>
     </div>
   `

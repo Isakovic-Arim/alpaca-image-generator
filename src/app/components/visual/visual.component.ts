@@ -5,16 +5,16 @@ import { VisualInteractionService } from 'src/app/services/visual-interaction.se
 @Component({
   selector: 'app-visual',
   template: `
-    <figure class="w-100" draggable="false">
-      <img src="./assets/alpaca/backgrounds/{{props[7]}}.png" class="absolute z-0" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/ears/{{props[1]}}.png" class="absolute z-10" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/neck/{{props[4]}}.png" class="absolute z-20" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/nose.png" class="absolute z-30" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/hair/{{props[0]}}.png" class="absolute z-60" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/mouth/{{props[3]}}.png" class="absolute z-70" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/eyes/{{props[2]}}.png" class="absolute z-80" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/leg/{{props[5]}}.png" class="absolute z-90" width="320em" height="320em" draggable="false">
-      <img src="./assets/alpaca/accessories/{{props[6]}}.png" [ngClass]="zIndex" class="absolute" width="320em" height="320em" draggable="false">
+    <figure id="preview" class="relative h-96 w-96">
+      <img src="./assets/alpaca/backgrounds/{{props[7]}}.png" class="absolute z-0 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/ears/{{props[1]}}.png" class="absolute z-10 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/neck/{{props[4]}}.png" class="absolute z-20 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/nose.png" class="absolute z-30 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/hair/{{props[0]}}.png" class="absolute z-60 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/mouth/{{props[3]}}.png" class="absolute z-70 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/eyes/{{props[2]}}.png" class="absolute z-80 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/leg/{{props[5]}}.png" class="absolute z-90 h-96 w-96" draggable="false">
+      <img src="./assets/alpaca/accessories/{{props[6]}}.png" [ngClass]="zIndex" class="absolute h-96 w-96" draggable="false">
     </figure>
   `
 })

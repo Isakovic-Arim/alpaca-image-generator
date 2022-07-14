@@ -6,8 +6,8 @@ import { VisualInteractionService } from 'src/app/services/visual-interaction.se
 @Component({
   selector: 'app-options-style',
   template: `
-    <header><h2 class="text-sm font-bold container w-96">{{ heading.toUpperCase() }}</h2></header>
-    <div class="container w-96 h-auto max-h-28 overflow-y-scroll mb-10">
+    <header><h2 class="text-sm font-bold">{{ heading.toUpperCase() }}</h2></header>
+    <div class="container w-96 max-h-28 overflow-y-scroll mb-10">
       <app-button (click)="changeAppearance(options.identifier, option)" *ngFor="let option of options.labels" [text]="option"></app-button>
     </div>
   `

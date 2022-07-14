@@ -1,13 +1,13 @@
 <app-header></app-header>
 <div class="container inline-flex">
-  <app-visual class="container w-100 mr-20"></app-visual>
-  <div>
+  <app-visual class="container"></app-visual>
+  <div class="w-96">
     <app-options-accessorize heading="accessorize the alpaca's" 
       [options]='["Hair", "Ears", "Eyes", "Mouth", "Neck", "Leg", "Accessories", "Background"]'>
     </app-options-accessorize>
 
-    <app-options-style heading="style" class="container w-96">
-    </app-options-style>
+    <app-options-style heading="style"></app-options-style>
   </div>
 </div>
-<app-button-action text="Random"></app-button-action>
+<app-button-random class="mr-6"></app-button-random>
+<app-button-download></app-button-download>
