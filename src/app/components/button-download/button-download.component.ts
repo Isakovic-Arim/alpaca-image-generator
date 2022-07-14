@@ -4,7 +4,7 @@ import * as html2canvas from 'html2canvas';
 @Component({
   selector: 'app-button-download',
   template: `
-    <button (click)="download()" class="bg-white text-black font-medium w-96 px-14 py-4 rounded-sm">Download</button>
+    <button (click)="download()" class="bg-white text-black font-medium px-14 py-4 rounded-sm">Download</button>
   `
 })
 
