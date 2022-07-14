@@ -31,7 +31,7 @@ export class ButtonComponent implements OnInit {
   }
 
   onClick() {
-      this.data.changeStyle(this.standard);
-      this.style = this.clicked;
+      this.data.changeStyle(this.standard); // change style for all other buttons
+      this.style = this.clicked;            // apply only to this one
   }
 }

@@ -7,7 +7,7 @@ import { OptionsInteractionService } from 'src/app/services/options-interaction.
   template: `
     <header><h2 class="text-sm font-bold container">{{ heading.toUpperCase() }}</h2></header>
     <div class="container w-96 mb-20">
-      <app-button (click)="newValue(i)" *ngFor="let option of options, index as i" [text]="option"></app-button>
+      <app-button (click)="changeDesign(i)" *ngFor="let option of options, index as i" [text]="option"></app-button>
     </div>
   `
 })
@@ -31,7 +31,7 @@ export class OptionsAccessorizeComponent {
 
   constructor(private data: OptionsInteractionService) { }
 
-  newValue(index: number) {
+  changeDesign(index: number) {
     this.data.changeValue(this.selections[index]);
   }
 }
